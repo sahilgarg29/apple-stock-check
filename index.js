@@ -47,6 +47,9 @@ async function checkStock(product) {
     };
 
     const res = await axios.request(config);
+
+    console.log(JSON.stringify(res.data));
+
     const availability =
       res.data.body.content.pickupMessage.stores[0].partsAvailability[
         product.id
