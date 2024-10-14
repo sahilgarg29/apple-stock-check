@@ -54,6 +54,8 @@ async function checkStock(product) {
 
     // console.log(JSON.stringify(res.data));
 
+    const storeName = res.data.body.content.pickupMessage.stores[0].storeName;
+
     const availability =
       res.data.body.content.pickupMessage.stores[0].partsAvailability[
         product.id
@@ -65,7 +67,7 @@ async function checkStock(product) {
         `https://api.telegram.org/bot${telegramApi}/sendMessage?chat_id=${chatId}&text=${message}`
       );
     }
-    console.log(product.name, " - ", availability);
+    console.log(product.name, " - ", availability, " - ", storeName);
   } catch (error) {
     console.error(error);
   }
