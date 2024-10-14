@@ -44,6 +44,10 @@ async function checkStock(product) {
       method: "get",
       maxBodyLength: Infinity,
       url: `https://www.apple.com/in/shop/fulfillment-messages?little=false&parts.0=${product.id}&mts.0=regular&mts.1=sticky&fts=true`,
+      headers: {
+        Cookie:
+          "as_dc=ucp5; as_gloc=d186ea9e0bc568a5aecbc63c21853fb6358244ca550b001b0505dc1b614904a626bcc28616edd592d070a3719f69a1afec45425c52be09d8de07c0cbf7bbaa4d831b614d58061d53f65c11d7a0336ce9ed79bf238627b2e298ccb15b1f2dd854; as_pcts=CWi5jW4rZE3h5GFzB9cgU7hlqc_VKaaYcCpLBzgls3lrP0o2abQrZ9S5Rfwqzr9iuZyc4FTBg9G8d6t0z2a9og1c9pAZ7LeJ7jcgqwDO_6Beo45R5MZhkyqH-lXI0; dssf=1; dssid2=87d13adc-b425-4115-8b5c-17c54e9360ba",
+      },
     };
 
     const res = await axios.request(config);
