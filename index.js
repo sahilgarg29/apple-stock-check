@@ -33,6 +33,10 @@ const products = [
     id: "MYWV3HN/A",
     name: "iPhone 16 Pro max BLACK",
   },
+  {
+    id: "MYEG3HN/A",
+    name: "iPhone 16 plus pink",
+  },
 ];
 
 const telegramApi = "7925095591:AAE1pSSLaP2vyovdWUJqJtksWU_kFxjcG9I";
