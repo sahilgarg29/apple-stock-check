@@ -33,10 +33,10 @@ const products = [
     id: "MYWV3HN/A",
     name: "iPhone 16 Pro max BLACK",
   },
-  {
-    id: "MYEG3HN/A",
-    name: "iPhone 16 plus pink",
-  },
+  // {
+  //   id: "MYEG3HN/A",
+  //   name: "iPhone 16 plus pink",
+  // },
 ];
 
 const telegramApi = "7925095591:AAE1pSSLaP2vyovdWUJqJtksWU_kFxjcG9I";
@@ -73,6 +73,11 @@ async function checkStock(product) {
     }
     console.log(product.name, " - ", availability, " - ", storeName);
   } catch (error) {
+    await axios.get(
+      `https://api.telegram.org/bot${telegramApi}/sendMessage?chat_id=${chatId}&text=Error:${
+        error.message || "no message available"
+      }`
+    );
     console.error(error);
   }
 }
