@@ -70,7 +70,7 @@ async function checkStock(product) {
 
     const res = await axios.request(config);
 
-    // console.log(JSON.stringify(res.data));
+    console.log(JSON.stringify(res.data));
 
     const storeName = res.data.body.content.pickupMessage.stores[0].storeName;
 
