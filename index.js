@@ -54,8 +54,6 @@ async function checkStock(product) {
         cookie:
           "dssid2=a1b8a58d-459c-4d52-9690-5a1cd905cce1; dssf=1; geo=IN; s_afc=p238%7Csfo291LJq-dc_mtid_187079nc38483_pcrid_715593096672_pgrid_109516736059_pntwk_g_pchan__pexid__ptid_kwd-12522920_; s_campaign=aos-IN-kwgo-brand--slid---product-; s_cc=true; pxro=1; dslang=IN-EN; site=IND; as_ltn_in=AAQEAMDQp02rgoZpvt7fmAygoY7n6t2pbEe1s0HziTCj1iuP_Pd6qxJ3-vVO54NxLUv4KChQBnhIf0s_OWAOyvx7uvge1KQAdWw; at_check=true; as_pcts=CS_+gUwxij_LkSAsetTq__BO2h-hZ5jAseU:pQ+ANvWWn84yqDuA:9E91Qg1cMN7hr7:CC_cJaAvL:FxhQEr7D_s0oA3FcgU7PEGQQjNMhFfAOIWjSRWcygHqDF+::PFiXhcZ9ld6tbp+t96YsyzvJDfSTjdGv_oSOxmXOCtl4kkN5nLZdCZP5Oi+zitMml_9z8fFg7+2qq+FqsmZjIpd1pyqN8Xq; as_sfa=Mnxpbnxpbnx8ZW5fSU58Y29uc3VtZXJ8aW50ZXJuZXR8MHwwfDE; as_uct=0; as_loc=a433b4f18b063adbd1ab7cca57cf031df3536b1076bf9e58829c2eb8bda42382a9d11668d04815da3b33f5064c08a527dd10de23697ef4877f83377f3d4ec5f9b92dde609e77bb04b44fda2ed74675bd7c84f093e497735171293f5a7e5b8dcd; rtsid=%7BIN%3D%7Bt%3Da%3Bi%3DR756%3B%7D%3B%7D; as_dc=ucp5; as_affl=p238%7C%7Cmtid%3A%3A187079nc38483%26mnid%3A%3Asfo291LJq-dc_mtid_187079nc38483_pcrid_715593096672_pgrid_109516736059_pntwk_g_pchan__pexid__ptid_kwd-12522920_%26cid%3A%3Aaos-IN-kwgo-brand--slid---product-%26%7C%7C20241016_183300; s_fid=5BF724812B797F1B-03BB4BBD8246C94E; s_vi=[CS]v1|338834B568BE4C49-60001407807D9F22[CE]; s_sq=%5B%5BB%5D%5D; as_rumid=1729128818.408; as_atb=1.0|MjAyNC0xMC0xNiAwNjozMzozOA|8e3e12ac9681bfb99cfe1289f7f9d223dd3534c5; as_pcts=CWi5jW4rZE3h5GFzB9cgU7hlqc_VKaaYcCpLBzgls3lrP0o2abQrZ9S5Rfwqzr9iuZyc4FTBg9G8d6t0z2a9og1c9pAZ7LeJ7jcgqwDO_6Beo45R5MZhkyqH-lXI0; dssf=1; dssid2=a1b8a58d-459c-4d52-9690-5a1cd905cce1; rtsid=%7BIN%3D%7Bt%3Da%3Bi%3DR756%3B%7D%3B%7D",
         priority: "u=1, i",
-        referer:
-          "https://www.apple.com/in/shop/buy-iphone/iphone-16-pro/6.3%22-display-128gb-desert-titanium",
         "sec-ch-ua":
           '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
         "sec-ch-ua-mobile": "?0",
@@ -70,7 +68,7 @@ async function checkStock(product) {
 
     const res = await axios.request(config);
 
-    console.log(JSON.stringify(res.data));
+    // console.log(JSON.stringify(res.data));
 
     const storeName = res.data.body.content.pickupMessage.stores[0].storeName;
 
